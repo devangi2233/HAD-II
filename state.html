@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 1</title>
+        <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+        <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    </head>
+    <body>
+        <div id="react-example"></div>
+        <script type="text/babel">
+        class Student extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    name : "Devangi Parmar",
+                    class : "SYIT",
+                    rollno : 319,
+                };
+            }
+            render() {
+                return (
+                    <div>
+                    <h1>Name :  {this.state.name}</h1>
+                    <h1>Class : {this.state.class}</h1>
+                    <h1>Roll No : {this.state.rollno}</h1>
+                    </div>
+
+                );
+            }
+        }
+        ReactDOM.render(<Student />, document.getElementById('react-example'));
+
+        
+    </script>
+
+    </body>
+</html>
